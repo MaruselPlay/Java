@@ -8,5 +8,6 @@ public class Conversation {
         name = scanner.nextLine();
         System.out.println("Hello, " + name);
         System.out.println("Your nickname is, " + name.substring(0, 2) + "gsy");
+        scanner.close();
     }
 }

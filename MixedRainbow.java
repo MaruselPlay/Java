@@ -19,5 +19,6 @@ public class MixedRainbow {
         for(int i = 0; i < 7; i++){
             System.out.println(colours[i]);
         }
+        scanner.close();
     }
 }
