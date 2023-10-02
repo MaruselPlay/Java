@@ -3,6 +3,6 @@ class HelloWord{
         System.out.println("Hello World");
         System.out.println(9/3);
         System.out.println(9%3);
-        System.out.println("Stone Roses: Ian, John");
+        System.out.println("Stone Roses: " + "Ian" + ", John");
     }
 }
