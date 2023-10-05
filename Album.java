@@ -16,14 +16,14 @@ public class Album {
             boolean inStock = Boolean.parseBoolean(scanner.nextLine());
             System.out.print("Enter the price: ");
             double price = Double.parseDouble(scanner.nextLine());
-            
+
             System.out.println(title);
             System.out.println(artist);
             System.out.println(shopSection);
             System.out.println(numTracks);
             System.out.println(inStock);
             System.out.println(price);
-            }catch(NumberFormatException exeption){
+        }catch(NumberFormatException exeption){
             System.out.println("Wrong format");
         }
         scanner.close();
