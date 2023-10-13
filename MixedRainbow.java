@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/*
+* This code lets the user to enter all colours of rainbow.
+* The code replaces each letters "e" by letter "a".
+* The code then makes every letter uppercase in each second colour.
+* Finally all colours are outputed
+*/
+
 public class MixedRainbow {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
