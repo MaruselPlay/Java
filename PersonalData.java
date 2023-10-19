@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/*
+* This code ask user for their name and age.
+* IF "fred" is entered instead age, the NumberFormatException is thrown.
+* Age is then converted to integer and both values are outputed.
+*/
+
 public class PersonalData {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);

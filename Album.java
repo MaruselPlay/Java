@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*
+* The code asks user to enter some data and then the code converts this data from string, to more suitable data types
+*/
+
 public class Album {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);

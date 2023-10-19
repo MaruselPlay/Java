@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*
+* Asks the parameters of swimming pool, calculates and outputs the perimeter and the volume of the swimmingpool.
+*/
+
 public class SwimmingPool{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);

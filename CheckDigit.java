@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+* Aks the user to input 4 digit code.
+* If the sum of 4 nu
+*/
+
 public class CheckDigit{
     public static void main(String[] args){
         try{
