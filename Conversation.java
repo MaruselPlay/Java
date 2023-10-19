@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-/*This code letting the user to enter their name
-*Then this code outputs "hello, " and the name you've entered
-*Then this code creates a nickname for the user, based on thier name
+/*
+* This code letting the user to enter their name
+* Then this code outputs "hello, " and the name you've entered
+* Then this code creates a nickname for the user, based on their name
 */
 
 public class Conversation {

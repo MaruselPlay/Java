@@ -48,6 +48,7 @@ public class EnrolmentStandard{
             }
         }
 
+        scanner.close();
         System.out.println("Name: " + name);
         System.out.println("Year born: " + year);
         System.out.println("Math GCSE: " + mathGcse);
