@@ -1,6 +1,12 @@
 import java.util.Scanner;
 import java.util.Random;
 
+/*
+* Asks for your email and checks if it is valid email
+* Ask for your year group and checks if it is valid
+* Asks if the user happy with the data entered, if yes, then it creates a student ID
+*/
+
 public class EnrolmentAdvanced{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
