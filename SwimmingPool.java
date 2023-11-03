@@ -23,7 +23,7 @@ public class SwimmingPool{
             double width = Double.parseDouble(widthString);
             double depth = Double.parseDouble(depthString);
 
-            System.out.println("The perimeter is " + (length * 2) + (width * 2));
+            System.out.println("The perimeter is " + ((length * 2) + (width * 2)));
             System.out.println("The volume is " + length * width * depth);
         }catch(NumberFormatException exeption){
             System.out.println("Some of data entered, wasn't a valid number");
