@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/*
+* This code ask for your name and validates it
+* Then it ask for the year you were born and also valodates it
+* Then it ask for your GCSE Maths score and validates it
+* Finally all data is outputed
+*/
+
 public class EnrolmentStandard{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
