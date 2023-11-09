@@ -1,6 +1,11 @@
 import java.util.Scanner;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
+/* 
+ * This is PetDog.
+ * In this program, the user is asked to input dog's name. mass and coat color.
+ * Then few commands avaliable to user: sit, stand, play, feed and kill commands.
+ */
 
 public class PetDog{
     public static void main(String[] args){
@@ -99,6 +104,8 @@ public class PetDog{
                         System.out.println("You've fed " + name + ", energy level of " + name + " is now " + levelEnergy);
                     }
                     break;
+                case "kill":
+                    alive = false;
                 
             }
         }
