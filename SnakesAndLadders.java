@@ -6,18 +6,22 @@ public class SnakesAndLadders{
 
         Scanner scanner = new Scanner(System.in);
 
+        //Let players enter their names
         System.out.print("Enter player 1 name: ");
         String player1 = scanner.nextLine();
         System.out.print("Enter player 2 name: ");
         String player2 = scanner.nextLine();
 
+        //setting up variables for later use
         boolean gameRunning = true;
         int currentPlayerTurn = 1;
         int player1_score = 0;
         int player2_score = 0;
+        //while loop, so the program will be ticking 
         while(true){
+            //creating instance of random class and getting random number
             int randomDice = new Random().nextInt(6) + 1;
-            if(currentPlayerTurn == 1){
+            if(currentPlayerTurn == 1){ //switching between player turns
                 currentPlayerTurn = 2;
                 player1_score += randomDice;
                 System.out.println(player1 + ", press enter to roll a dice: ");
@@ -30,7 +34,7 @@ public class SnakesAndLadders{
                 scanner.nextLine();
                 System.out.println(player2 + ", your score is now " + player2_score);
             }
-
+            //win
             if(player1_score >= 25){
                 System.out.println(player1 + ", you won!");
                 break;
@@ -38,10 +42,12 @@ public class SnakesAndLadders{
                 System.out.println(player2 + ", you won!");
                 break;
             }
-            
+
+            //putting both player in array so we can perform switch for each player without tonns of code
             int players[] = {player1_score, player2_score};
             int player = 1;
             for(int playerScore : players){
+                //switching between different actions to do 
                 switch(playerScore){
                     case 3:
                         if(player == 1){
