@@ -1,5 +1,9 @@
 import java.util.Random;
 
+/*
+ * Outputs the sum of 4 random rolls
+ */
+
 public class RandomDice{
     public static void main(String[] args){
         int rolls = 0;
