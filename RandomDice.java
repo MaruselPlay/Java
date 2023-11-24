@@ -7,10 +7,11 @@ import java.util.Random;
 public class RandomDice{
     public static void main(String[] args){
         int rolls = 0;
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 4; i++){
             rolls += new Random().nextInt(6) + 1;
         }
+        double rollsDouble = Double.parseDouble(rolls + "");
 
-        System.out.println(rolls);
+        System.out.println(rollsDouble / 4.0);
     }
 }

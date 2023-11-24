@@ -6,25 +6,29 @@ public class ExamGrade{
         Scanner scanner = new Scanner(System.in);
 
         int highestNumber = 0;
-        for(int i = 1; i < 3; i++){
+
+        //for loop, so user can enter score 3 times
+        for(int i = 0; i < 3; i++){
+            //while loop, so it will repeat until the user has entered a valid number
             while(true){
-                System.out.print("Enter test number " + i + ": ");
+                System.out.print("Enter test score " + i + ": "); //asking to enter the score
                 try{
-                    int number = Integer.parseInt(scanner.nextLine());
-                    if(number < 0 || number > 100){
+                    int number = Integer.parseInt(scanner.nextLine()); //converting string to an integer
+                    if(number < 0 || number > 100){ //cheking if the integer is in valid grade boundaries
                         System.out.println("Number should be greater or equal to 0 and not higher than 100");
                     }else{
-                        if(number > highestNumber){
+                        if(number > highestNumber){ //this is needed so highest score can be found
                             highestNumber = number;
                         }
                         break;
                     }
-                }catch(NumberFormatException exception){
-                    System.out.println("Not a valid number");
+                }catch(NumberFormatException exception){ //handled error if user has entered not valid integer
+                    System.out.println("Not a valid integer");
                 }
             }
         }
 
+        //outputting all the data to the user
         System.out.println("Highest score was " + highestNumber);
         if(highestNumber < 50){
             System.out.println("Grade: Fail");
