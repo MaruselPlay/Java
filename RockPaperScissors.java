@@ -19,7 +19,7 @@ public class RockPaperScissors{
             }
             userChoice = scanner.nextLine();
             if(Arrays.asList(avaliableItems).contains(userChoice)){ //checks if the item entered by the user is in list of items
-                validInput = true;
+                validInput = true; //end while loop
             }
         }
 

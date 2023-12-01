@@ -10,7 +10,7 @@ public class ExamGrade{
         for(int i = 0; i < 3; i++){
             //while loop, so it will repeat until the user has entered a valid number
             while(true){
-                System.out.print("Enter test score " + i + ": "); //asking to enter the score
+                System.out.print("Enter test score " + (i + 1) + ": "); //asking to enter the score
                 try{
                     int number = Integer.parseInt(scanner.nextLine()); //converting string to an integer
                     if(number < 0 || number > 100){ //cheking if the integer is in valid grade boundaries
@@ -19,7 +19,7 @@ public class ExamGrade{
                         if(number > highestNumber){ //this is needed so highest score can be found
                             highestNumber = number;
                         }
-                        break;
+                        break; //to end while loop
                     }
                 }catch(NumberFormatException exception){ //handled error if user has entered not valid integer
                     System.out.println("Not a valid integer");
