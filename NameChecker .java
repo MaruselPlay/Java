@@ -22,5 +22,6 @@ class NameChecker{
                 System.out.print(name.charAt(i));
             }
         }
+        scanner.close();
     }
 }

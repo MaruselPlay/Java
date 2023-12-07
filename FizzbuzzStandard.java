@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Goes from 1 to 100 and outputs FizzBuzz for numbers that can be divided by 3 and 5.
  * If number can't be divided by 3 and 5, it 
