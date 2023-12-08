@@ -13,13 +13,14 @@ class NameChecker{
         String name = scanner.nextLine();
 
         for(int i = 0; i < name.length(); i++){
+            //outputing all characters of the name on new lines
             System.out.println(name.charAt(i));
         }
         for(int i = 0; i < name.length(); i++){
             try{
-                Integer.parseInt(name.charAt(i) + "");
+                Integer.parseInt(name.charAt(i) + ""); //checking if the character integer or not
             }catch(Exception e){
-                System.out.print(name.charAt(i));
+                System.out.print(name.charAt(i)); //outputing character if it is not number
             }
         }
         scanner.close();
