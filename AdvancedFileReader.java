@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-class BasicFileReader{
+class AdvancedFileReader{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         BufferedReader fileReader;
