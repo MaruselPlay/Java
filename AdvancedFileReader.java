@@ -7,11 +7,12 @@ class AdvancedFileReader{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         BufferedReader fileReader;
-        String fileName 
+        String fileName = "";
         while(true){
             System.out.print("Enter the name of file: ");
             try{
-                fileReader = new BufferedReader(new FileReader(scanner.nextLine())); //opens the file user has entered
+                fileName = scanner.nextLine();
+                fileReader = new BufferedReader(new FileReader(fileName)); //opens the file user has entered
                 break;
             }catch(FileNotFoundException e){
                 System.out.println("File not found");
@@ -20,8 +21,11 @@ class AdvancedFileReader{
         int count = 0;
         String line = "";
         int lines = 0;
-        while (fileReader.readLine() != null) lines++;
-        reader.close();
+        linesCounter = new BufferedReader(new FileReader(fileName));
+        while (linesCounter.readLine() != null) lines++;
+        linesCounter.close();
+        String[] = new String[lines];
+
         while(true){ //while loop to read lines from the file until end
             try{
                 line = fileReader.readLine();
