@@ -2,7 +2,7 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 
-class BasicReader{
+class BasicFileReader{
     public static void main(String[] args){
         try{
             BufferedReader filereader = new BufferedReader(new FileReader("file.txt")); //creating BufferedReader object to read the contents of the file
