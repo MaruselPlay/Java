@@ -5,11 +5,12 @@ class TwelveDays{
     String[] gifts = {"Drummers Drumming", "Pipers Piping", "lords a leaping", "ladies dancing", "maids a milking", "swans a swimming", "geese a laying", "golden rings", "calling birds", "french hens", "turtle doves", "A Partridge in a pear tree"};
     int dayCount = 0; //declaring a variable to store count of days
     String day;
-    for(int i = 0; i < gifts.length; i++){ //for loo to go through each gift in array
-      if(i == gifts.length - 1){ //logic to output and before the last gift
-        System.out.println("and " + gifts[i]);
-        break;
-      }
+    String[] giftedGifts = new String[12];
+    for(int i = gifts.length - 1; i >= 0; i--){ //for loo to go through each gift in array
+      //try{
+        //Thread.sleep(1000); //program sleeps for one second so there is one second delay between output
+      //}catch(InterruptedException e){}
+      giftedGifts[dayCount] = gifts[i];
 
       dayCount++;
 
@@ -25,8 +26,12 @@ class TwelveDays{
       }
 
       System.out.println("On the " + day + " day of Christmas my true love gave to me: ");
-      for(int j = 0; j < gifts.length - i; j++){ //outputting all gifts for the current day and all days lower
-        System.out.println(dayCount + " " + gifts[j]);
+      for(int j = i - 1; j >= 0; j--){ //outputting all gifts for the current day and all days lower
+        if(j == gifts.length - 1){
+          System.out.println(gifts[j]);
+        }else{
+          System.out.println(dayCount + " " + gifts[j]);
+        }
       }
     }
   }
