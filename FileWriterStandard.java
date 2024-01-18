@@ -11,11 +11,11 @@ class FileWriterStandard{
   }
 
   public void start(){
-    writeDataToFile(getFileNameFromUser());
+    this.writeDataToFile(this.getFileNameFromUser());
   }
 
   public String getFileNameFromUser(){
-    System.out.println("Enter the name of file: ");
+    System.out.print("Enter the name of file: ");
     return new Scanner(System.in).nextLine();
   }
 

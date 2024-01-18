@@ -1,40 +1,62 @@
 import java.util.Scanner;
 import java.io.FileWriter;
 
-class FileWriterStandard{
+class FileWriterAdvanced{
 
-  public String[] dataToWrite = new Array[10];
+  public String[] dataToWrite = new String[10];
 
   public static void main(String[] args){
-    FileWriterStandard self = new FileWriterStandard();
-    self.start();
+    FileWriterAdvanced object = new FileWriterAdvanced();
+    object.start();
   }
 
   public void start(){
     try{
-      FileWriter fileWriter = new FileWriter(file);
-      int count = 0;
-      String[] lines = getLinesFromUser();
+      Scanner scanner = new Scanner(System.in);
+      this.inputLinesFromUser(scanner);
+      this.writeLines(this.inputFileNameFromUser(scanner));
+      scanner.close();
     }catch(Exception e){
       System.out.println("An error happend while writing to file: ");
       e.printStackTrace();
     }
   }
 
-  public String[] getLinesFromUser(){
-    new Scanner(System.in).nextLine()
+  public void inputLinesFromUser(Scanner scanner){
+    int count = 0;
+    String line;
     do{
-
-    }
-    System.out.println("Enter the name of file: ");
-    return new Scanner(System.in).nextLine();
+      System.out.print("Enter line or type \"STOP\" to stop writing: ");
+      line = scanner.nextLine();
+      if(line.equals("STOP")){
+        break;
+      }
+      this.dataToWrite[count] = line;
+      count++;
+    }while(this.canWriteToArray(count));
   }
 
-  public void writeLines(FileWriter fileWriter, String[] lines){
-    for(int i = 0; i < lines.length; i++){
-      fileWriter.write(lines[i] + "\n");
+  public boolean canWriteToArray(int index){
+    return index < this.dataToWrite.length;
+  }
+
+  public String inputFileNameFromUser(Scanner scanner){
+    System.out.print("Enter the name of file: ");
+    return scanner.nextLine();
+  }
+
+  public void writeLines(String file){
+    try{
+      FileWriter fileWriter = new FileWriter(file);
+
+      for(int i = 0; i < this.dataToWrite.length; i++){
+        fileWriter.write(this.dataToWrite[i] + "\n");
+      }
+      fileWriter.close();
+      System.out.println("Done!");
+    }catch(Exception e){
+      System.out.println("An error happend while writing to file: ");
+      e.printStackTrace();
     }
-    fileWriter.close();
-    System.out.println("Done!");
   }
 }

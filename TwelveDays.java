@@ -6,7 +6,7 @@ class TwelveDays{
     int dayCount = 0; //declaring a variable to store count of days
     String day;
     String[] giftedGifts = new String[12];
-    for(int i = gifts.length - 1; i >= 0; i--){ //for loo to go through each gift in array
+    for(int i = 0; i < gifts.length; i++){ //for loo to go through each gift in array
       //try{
         //Thread.sleep(1000); //program sleeps for one second so there is one second delay between output
       //}catch(InterruptedException e){}
@@ -26,9 +26,9 @@ class TwelveDays{
       }
 
       System.out.println("On the " + day + " day of Christmas my true love gave to me: ");
-      for(int j = i - 1; j >= 0; j--){ //outputting all gifts for the current day and all days lower
+      for(int j = 0; j <= i; j++){ //outputting all gifts for the current day and all days lower
         if(j == gifts.length - 1){
-          System.out.println(gifts[j]);
+          System.out.println("and " + gifts[j]);
         }else{
           System.out.println(dayCount + " " + gifts[j]);
         }
