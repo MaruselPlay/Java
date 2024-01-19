@@ -56,16 +56,19 @@ class FileWriterAdvanced{
     return scanner.nextLine();
   }
 
+  /*
+  * The following function accepts the file name as a parameter and writes data from the global array to the file given
+  */
   public void writeLines(String file){
-    try{
+    try{//try catch block to catch any potential errors
       FileWriter fileWriter = new FileWriter(file);
 
       for(int i = 0; i < this.dataToWrite.length; i++){
-        fileWriter.write(this.dataToWrite[i] + "\n");
+        fileWriter.write(this.dataToWrite[i] + "\n"); //writing each element of the array on separate lines of the file
       }
       fileWriter.close();
       System.out.println("Done!");
-    }catch(Exception e){
+    }catch(Exception e){//error handling 
       System.out.println("An error happend while writing to file: ");
       e.printStackTrace();
     }
