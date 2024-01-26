@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class SecretAtbash{
 
-  public Scanner scanner = new Scanner(System.in); //declaring global scanner to use at any point in the class
+  private Scanner scanner = new Scanner(System.in); //declaring global scanner to use at any point in the class
 
 
   /*
@@ -51,14 +51,14 @@ class SecretAtbash{
   /*
   * The following function returns bool value the represent if the message is valid or not
   */
-  public boolean isMessageValid(String message){
+  private boolean isMessageValid(String message){
     return !message.contains(",");
   }
 
   /*
   * The following function gets the input from the user
   */
-  public String getUserInput(String outputMessage){
+  private String getUserInput(String outputMessage){
     if(!outputMessage.equals("")){
       System.out.print(outputMessage);
     }
@@ -68,7 +68,7 @@ class SecretAtbash{
   /*
   * The following function encrypts the message given using the Atbash technique
   */
-  public String encryptMessage(String message){
+  private String encryptMessage(String message){
     String encrypted = "";
     for(int i = 0; i < message.length(); i++){ //a loop to go through and encrypt each character in the message given
       char shiftedChar = (char) ((int) message.charAt(i) + 3);
@@ -77,10 +77,10 @@ class SecretAtbash{
     return encrypted;
   }
 
-   /*
+  /*
   * The following function decrypts the message given using the reversed Atbash technique
   */
-  public String decryptMessage(String encrypted){
+  private String decryptMessage(String encrypted){
     String decrypted = "";
     for(int i = 0; i < encrypted.length(); i++){ //a loop to go through and decrypt each character in the message given
       char shiftedChar = (char) ((int) encrypted.charAt(i) - 3); //shifts current character 3 places back
