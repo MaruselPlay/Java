@@ -28,11 +28,12 @@ class LinearNames{
   private void fillArray(){
     for(int i = 0; i < 12; i++){ //a loop to ask the user for input 12 times
       if(i < 10){ //a check to make sure that no errors could be thrown
-        System.out.print("\nEnter a name: ");
+        System.out.print("Enter a name: ");
         this.names[i] = this.scanner.nextLine();
-        System.out.print("\nCurrent number of names in the array: " + (i + 1));
+        System.out.print("\n");
+        System.out.println("Current number of names in the array: " + (i + 1));
       }else if(i == 10){
-        System.out.print("\nThe array is full!");
+        System.out.println("The array is full!");
       }
     }
   }
@@ -41,14 +42,14 @@ class LinearNames{
   * Asks a user for a value and checks if the value in the array, using linear search
   */
   private void searchUserValue(){
-    System.out.print("\nEnter a name to search: ");
+    System.out.println("Enter a name to search: ");
     SearchResult result = this.searchForValue(this.scanner.nextLine());
     if(!result.found){
-      System.out.print("\nThe name doesn't exist in the array");
+      System.out.println("The name doesn't exist in the array");
       return;
     }
 
-    System.out.print("\nFound at position " + result.position);
+    System.out.println("Found at position " + result.position);
   }
 
   /**
@@ -72,8 +73,9 @@ class LinearNames{
   */
   private void outputNames(){
     for(int i = 0; i < this.names.length - 1; i++){
-      System.out.print("\n" + this.names[i] + (i == this.names.length - 1 ? "" : ", "));
+      System.out.print(this.names[i] + (i == this.names.length - 2 ? "" : ", "));
     }
+    System.out.print("\n");
   }
 }
 
