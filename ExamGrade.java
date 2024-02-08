@@ -27,6 +27,8 @@ public class ExamGrade{
             }
         }
 
+        scanner.close();
+
         //outputting all the data to the user
         System.out.println("Highest score was " + highestNumber);
         if(highestNumber < 50){

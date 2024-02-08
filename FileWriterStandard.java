@@ -19,7 +19,10 @@ class FileWriterStandard{
   */
   public String getFileNameFromUser(){
     System.out.print("Enter the name of file: ");
-    return new Scanner(System.in).nextLine();
+    Scanner scanner = new Scanner(System.in);
+    String line = scanner.nextLine();
+    scanner.close();
+    return line;
   }
 
   /*

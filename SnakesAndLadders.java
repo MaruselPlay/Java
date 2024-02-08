@@ -13,7 +13,6 @@ public class SnakesAndLadders{
         String player2 = scanner.nextLine();
 
         //setting up variables for later use
-        boolean gameRunning = true;
         int currentPlayerTurn = 1;
         int player1_score = 0;
         int player2_score = 0;

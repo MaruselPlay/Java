@@ -2,7 +2,7 @@ import java.util.Random;
 
 class BubbleLottery{
   
-  public static void main(){
+  public static void main(String[] args){
     BubbleLottery instance = new BubbleLottery();
     instance.run();
   }
