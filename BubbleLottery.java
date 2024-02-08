@@ -8,47 +8,59 @@ class BubbleLottery{
   }
 
   public void run(){
-    String ticket = this.generateTicket();
-    String sortedTicket = this.bubbleSort(ticket);
+    int[] ticket = this.generateTicket();
+    this.outputTicket(ticket);
+    int[] sortedTicket = this.bubbleSort(ticket);
+    this.outputHighestPlayerNumber(sortedTicket);
+    this.outputLowestPlayerNumber(sortedTicket);
   }
 
-  private String generateTicket(){
+  private int[] generateTicket(){
     Random random = new Random(); 
-    String ticket = "";
+    int[] ticket = new int[6];
     for(int i = 0; i < 6; i++){
-      ticket += random.nextInt(48) + 1;
+      ticket[i] = random.nextInt(48) + 1;
     }
     return ticket;
   }
 
-  private void outputTicket(String ticket){
-    System.out.print(ticket);
+  private void outputHighestPlayerNumber(int[] sortedTicket){
+    System.out.println("Highest number: " + sortedTicket[0]);
   }
 
-  private String bubbleSort(String ticket){
+  private void outputLowestPlayerNumber(int[] sortedTicket){
+    System.out.println("Lowest number: " + sortedTicket[sortedTicket.length - 1]);
+  }
+
+  private void outputTicket(int[] ticket){
+    System.out.print("Ticket: ");
+    for(int i = 0; i < ticket.length - 1; i++){
+      System.out.print(ticket[i] + " ");
+    }
+    System.out.println("");
+  }
+
+  private int[] bubbleSort(int[] ticket){
     int currentElement = 0;
-    char tempItem;
+    int tempItem;
     boolean swap = true;
-    System.out.println(ticket);
-    char[] ticketChars = ticket.toCharArray();
+
     while(swap){
       swap = false;
-      for(int i = 0; i < ticketChars.length; i++){
-        if(ticketChars[currentElement] > ticketChars[currentElement + 1]){
-          tempItem = ticketChars[currentElement + 1];
-          ticketChars[currentElement + 1] = ticketChars[currentElement];
-          ticketChars[currentElement] = tempItem;
+      for(int i = 0; i < ticket.length - 1; i++){
+        if(currentElement != ticket.length - 1 && ticket[currentElement] < ticket[currentElement + 1]){
+          tempItem = ticket[currentElement + 1];
+          ticket[currentElement + 1] = ticket[currentElement];
+          ticket[currentElement] = tempItem;
           swap = true;
         }
         currentElement++;
-        if(currentElement == ticket.length()){
+        if(currentElement == ticket.length){
           currentElement = 0;
         }
       }
     }
 
-    String result = new String(ticketChars);
-    System.out.println(result);
-    return result;
+    return ticket;
   }
 }
