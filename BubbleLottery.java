@@ -1,12 +1,18 @@
 import java.util.Random;
 
 class BubbleLottery{
-  
+
+  /**
+  * Main function that runs the program
+  */
   public static void main(String[] args){
     BubbleLottery instance = new BubbleLottery();
     instance.run();
   }
 
+  /**
+  * Main function that calls all functions and controls the program 
+  */
   public void run(){
     int[] ticket = this.generateTicket();
     this.outputTicket(ticket);
@@ -15,6 +21,9 @@ class BubbleLottery{
     this.outputLowestPlayerNumber(sortedTicket);
   }
 
+  /**
+  * Generates ticket with 6 random numbers, returns result as int array
+  */
   private int[] generateTicket(){
     Random random = new Random(); 
     int[] ticket = new int[6];
@@ -24,14 +33,23 @@ class BubbleLottery{
     return ticket;
   }
 
+  /**
+  * Output highest number from the int array given by the parameters
+  */
   private void outputHighestPlayerNumber(int[] sortedTicket){
     System.out.println("Highest number: " + sortedTicket[0]);
   }
 
+  /**
+  * Output lowest number from the int array given by the parameters
+  */
   private void outputLowestPlayerNumber(int[] sortedTicket){
     System.out.println("Lowest number: " + sortedTicket[sortedTicket.length - 1]);
   }
 
+  /**
+  * Accepts ticket as int array and outputs it
+  */
   private void outputTicket(int[] ticket){
     System.out.print("Ticket: ");
     for(int i = 0; i < ticket.length - 1; i++){
@@ -40,6 +58,10 @@ class BubbleLottery{
     System.out.println("");
   }
 
+  /**
+  * Accepts ticket as int array and performs bubble sort in ascending order.
+  * Returns sorted ticket as int array
+  */
   private int[] bubbleSort(int[] ticket){
     int currentElement = 0;
     int tempItem;
