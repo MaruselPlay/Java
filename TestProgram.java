@@ -7,16 +7,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MyModularLightbulb{
+public class TestProgram{
   
-    private JFrame frame = new JFrame("Lightbulb switch"); //creating new instance of the JFrame object
+    private JFrame frame = new JFrame("Не вирус (не точно)"); //creating new instance of the JFrame object
     private JPanel panel = new JPanel(null); //creating new instance of JPanel object
     private JButton onButton = new JButton("On"); //creating new instance of JButton for on button
     private JButton offButton = new JButton("Off"); //creating new instance of JButton for off button
     private JLabel label = new JLabel(); //creating new JLabel instance for displaying the current state of the lightbulb
     
     public static void main(String[] args){
-        MyModularLightbulb instance = new MyModularLightbulb();
+        TestProgram instance = new TestProgram();
         instance.start();
     }
     
@@ -51,7 +51,7 @@ public class MyModularLightbulb{
      */
     public void init(){
         //initialises the frame
-        this.frame.setSize(600, 400);
+        this.frame.setSize((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2, (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2);
         this.setLocationRelativeTo(frame, Toolkit.getDefaultToolkit().getScreenSize()); //sets frame location relative to screen size (center location)
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.setLayout(new GridLayout(1,1));

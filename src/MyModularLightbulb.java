@@ -30,9 +30,9 @@ public class MyModularLightbulb{
     
     public void setEnabled(boolean value){
         if(value){
-            this.label.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("on.jpg"))));
+            this.label.setIcon(new ImageIcon("on.jpg"));
         }else{
-            this.label.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("off.jpg"))));
+            this.label.setIcon(new ImageIcon("off.jpg"));
         }
     }
     
@@ -57,8 +57,7 @@ public class MyModularLightbulb{
         this.frame.setLayout(new GridLayout(1,1));
         
         //initialises the label and adds it to the panel
-        //initialises the label and adds it to the panel
-        this.label.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("off.jpg"))));
+        this.label.setIcon(new ImageIcon("off.jpg"));
         this.label.setSize(100, 161);
         this.setLocationRelativeTo(label, frame.getSize(), 0, 50); //sets label location to center of frame +50 pixels in y direction
         this.panel.add(this.label);
